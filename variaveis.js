@@ -4,9 +4,8 @@ let statusativo = true;
 let pontuacao = 10
 const cpf = 10238283899;
 
-console.log("a pontuacao dele foi", pontuacao);
-pontuacao = pontuacao + 50;
+    let nota1 = 10;
+    let nota2 = 6;
 
-console.log("A nova pontuacao e", pontuacao)
-
-console.log("o cpf e:", cpf)
+    media= (nota1+nota2)/2
+    console.log("a media e",+ media);
