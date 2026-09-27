@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "prompt-list": "^3.2.0",
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "sistema-gerenciador-jogo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "teste.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaslima245/sistema-gerenciador-jogo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucaslima245/sistema-gerenciador-jogo/issues"
+  },
+  "homepage": "https://github.com/lucaslima245/sistema-gerenciador-jogo#readme"
+}
