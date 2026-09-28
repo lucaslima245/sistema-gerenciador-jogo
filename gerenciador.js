@@ -4,7 +4,7 @@ let ponto = Number(prompt("digite sua pontucao:"));
 
 const pontominimo= 1000;
 
-if (isNaN(ponto)) { 
+if (isNaN(ponto )) { 
 
 console.log("ERRO GRAVE: Você não digitou um número válido. Cadastro cancelado."); 
 
