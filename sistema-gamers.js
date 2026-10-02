@@ -5,10 +5,12 @@ let time = [];
 let continuar = true;
  
 function mostraropcoes () {
+    console.log("---------- SISTEMA DE GAMES-----------");
     console.log("1 - cadastrar");
     console.log("2 - deletar");
     console.log("3 - mostrar equipe");
-    console.log("4 - sair");
+    console.log("4 - calculo da media da equipe");
+    console.log("5 - sair")
     console.log("\n");
 
 }
