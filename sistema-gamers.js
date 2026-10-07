@@ -15,20 +15,42 @@ function mostraropcoes () {
 
 }
 
+
 function mostrarequipe() {
-    console.log("-------------------------------------");
-    console.log("sua equipe atual e", time);
-    console.log("-------------------------------------");
+    if (time.length === 0) {
+        return;
+    }
+
+    for (let i = 0; i < time.length; i++) {
+        let jogador = time[i];
+        console.log((i + 1) + ". " + jogador.nome + " | funcao: " +jogador.funcao + " | pontuacao: " +jogador.pontuacao)
+    }
 }
+
 
 function cadastrarjogador() {
     let nomejogador = prompt("digite o nome do jogador: ");
+    let funcaojogador = prompt("digite a funcao no time:  ");
+    let pontuacaojogador = Number(prompt("digite a pontuacao: "));
     
-        time.push(nomejogador);
+    if (isNaN(pontuacaojogador)) {
+        console.log("pontuacao invalida")
+        return;
+    } else {
+        let recruta = {
+            nome: nomejogador,
+            funcao: funcaojogador,
+            pontuacao: pontuacaojogador,         
+        }
+        
+        
+        time.push(recruta);
         console.log("jogador "+nomejogador+" foi cadastrado com sucesso");
-        console.log("-------------------------------------");
+        console.log("---------------------------------------");
+    }
 
 }
+
 
 function deletarjogador() {
         if (time.length === 0) {
@@ -47,8 +69,6 @@ function deletarjogador() {
         console.log("---------------------");
 }
  
-
-
 
 while(continuar === true) {  
     mostraropcoes();
