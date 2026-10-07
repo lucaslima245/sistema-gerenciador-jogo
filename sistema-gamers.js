@@ -23,7 +23,8 @@ function mostrarequipe() {
 
     for (let i = 0; i < time.length; i++) {
         let jogador = time[i];
-        console.log((i + 1) + ". " + jogador.nome + " | funcao: " +jogador.funcao + " | pontuacao: " +jogador.pontuacao)
+        console.log((i + 1) + ". " + jogador.nome + " | funcao: " +jogador.funcao + " | pontuacao: " +jogador.pontuacao/n)
+
     }
 }
 
@@ -57,37 +58,64 @@ function deletarjogador() {
             console.log("jogador nao cadastrado")
             return;
         }
+        
         let nomedeletado = prompt("digite o nome a ser deletado");
-        let index = time.indexOf(nomedeletado);
+        let indexdeletado = -1;
 
-        if (index === -1) {
+        for (let i = 0; i < time.length; i++) {
+            if (time[i].nome === nomedeletado) {
+                indexdeletado = i;
+                break;
+            }
+        }
+
+        if (indexdeletado === -1) {
             console.log("o jogador nao foi encontrado")
             return;
         }
+
         time.splice(index, 1);
         console.log("jogador deletado com sucesso");
-        console.log("---------------------");
 }
  
+function calculodamedia(){
+    if (time.length === 0) {
+        console.log("nenhum jogador foi cadastrado")
+        return;
+    }
+    let totalpontos = 0;
+    for (let i = 0; i > time.length; i++){
+        totalpontos = totalpontos + time[i].pontuacao
+    }
+    let mediapontos = totalpontos / time.length;
+
+    console.log("o time possui uma pontuacao media de:", mediapontos)
+
+}
 
 while(continuar === true) {  
     mostraropcoes();
-    let opcao = Number(prompt("digite sua opcao: "))
+    let opcao = (prompt("digite sua opcao: "))
     
-    if(opcao === 1){
+    if(opcao === "1"){
         cadastrarjogador();    
     
-    } else if(opcao=== 2) {
+    } else if(opcao=== "2") {
         deletarjogador();     
 
-    } else if(opcao === 3){
+    } else if(opcao === "3"){
         mostrarequipe();
     }
     
-    else if(opcao === 4){
-        continuar = false;
+    else if(opcao === "4"){
+        calculodamedia();
+    }
     
-    } else {
+    else if (opcao === "5") {
+        continuar = false;
+    }   
+     
+    else {
         console.log("opcao invalida, digite outra opcao...") 
 
     }
