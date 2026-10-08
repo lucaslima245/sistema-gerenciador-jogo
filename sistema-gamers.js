@@ -23,7 +23,8 @@ function mostrarequipe() {
 
     for (let i = 0; i < time.length; i++) {
         let jogador = time[i];
-        console.log((i + 1) + ". " + jogador.nome + " | funcao: " +jogador.funcao + " | pontuacao: " +jogador.pontuacao/n)
+        console.log((i + 1) + ". " + jogador.nome + " | funcao: " +jogador.funcao + " | pontuacao: " +jogador.pontuacao)
+        console.log("\n")
 
     }
 }
@@ -74,7 +75,7 @@ function deletarjogador() {
             return;
         }
 
-        time.splice(index, 1);
+        time.splice(time, 1);
         console.log("jogador deletado com sucesso");
 }
  
@@ -84,7 +85,7 @@ function calculodamedia(){
         return;
     }
     let totalpontos = 0;
-    for (let i = 0; i > time.length; i++){
+    for (let i = 0; i < time.length; i++){
         totalpontos = totalpontos + time[i].pontuacao
     }
     let mediapontos = totalpontos / time.length;
@@ -92,6 +93,36 @@ function calculodamedia(){
     console.log("o time possui uma pontuacao media de:", mediapontos)
 
 }
+
+function buscarjogador(){
+    if (time.length === 0) {
+        console.log("nenhum jogador foi cadastrado")
+    }
+
+    let nomedesejado = prompt("qual jogador deseja procurar na lista")
+    
+    let encontrou = false;
+    
+    if(encontrou = false){
+    for (let i = 0; i < time.length; i++) {
+        
+        let jogadorAtual = time[i]; 
+
+        if (jogadorAtual.nome === nomedesejado) { 
+
+        console.log("JOGADOR ENCONTRADO!");
+        console.log("Nome: " + jogadorAtual.nome + " | Pontos: " + jogadorAtual.pontuacao);
+        
+        encontrou = true
+        }    
+    }
+
+    }
+    }
+
+
+
+
 
 while(continuar === true) {  
     mostraropcoes();
@@ -112,8 +143,11 @@ while(continuar === true) {
     }
     
     else if (opcao === "5") {
+        buscarjogador();
+    } 
+    else if (opcao ==="6") {
         continuar = false;
-    }   
+    } 
      
     else {
         console.log("opcao invalida, digite outra opcao...") 
