@@ -10,7 +10,8 @@ function mostraropcoes () {
     console.log("2 - deletar");
     console.log("3 - mostrar equipe");
     console.log("4 - calculo da media da equipe");
-    console.log("5 - sair")
+    console.log("5 - buscar jogador")
+    console.log("6 - sair")
     console.log("\n");
 
 }
@@ -96,32 +97,31 @@ function calculodamedia(){
 
 function buscarjogador(){
     if (time.length === 0) {
-        console.log("nenhum jogador foi cadastrado")
+        console.log("nenhum jogador foi cadastrado");
+        return;
     }
 
     let nomedesejado = prompt("qual jogador deseja procurar na lista")
-    
     let encontrou = false;
     
-    if(encontrou = false){
+    
     for (let i = 0; i < time.length; i++) {
-        
         let jogadorAtual = time[i]; 
 
         if (jogadorAtual.nome === nomedesejado) { 
-
         console.log("JOGADOR ENCONTRADO!");
         console.log("Nome: " + jogadorAtual.nome + " | Pontos: " + jogadorAtual.pontuacao);
+        encontrou = true;
         
-        encontrou = true
-        }    
+        break;
+        }
     }
+  
+        if (!encontrou) { 
+
+        console.log("O jogador " + nomeDesejado + " não faz parte da nossa equipe."); 
 
     }
-    }
-
-
-
 
 
 while(continuar === true) {  
@@ -154,6 +154,5 @@ while(continuar === true) {
 
     }
 
-
-
+}
 }
