@@ -106,11 +106,12 @@ function buscarjogador(){
     
     
     for (let i = 0; i < time.length; i++) {
-        let jogadorAtual = time[i]; 
+        let jogadoratual = time[i]; 
 
-        if (jogadorAtual.nome === nomedesejado) { 
+        if (jogadoratual.nome === nomedesejado) { 
+
         console.log("JOGADOR ENCONTRADO!");
-        console.log("Nome: " + jogadorAtual.nome + " | Pontos: " + jogadorAtual.pontuacao);
+        console.log("Nome: " + jogadoratual.nome + " | Pontos: " + jogadoratual.pontuacao);
         encontrou = true;
         
         break;
@@ -119,10 +120,10 @@ function buscarjogador(){
   
         if (!encontrou) { 
 
-        console.log("O jogador " + nomeDesejado + " não faz parte da nossa equipe."); 
+        console.log("O jogador " + nomedesejado + " não faz parte da nossa equipe."); 
 
     }
-
+}
 
 while(continuar === true) {  
     mostraropcoes();
@@ -155,4 +156,4 @@ while(continuar === true) {
     }
 
 }
-}
+
