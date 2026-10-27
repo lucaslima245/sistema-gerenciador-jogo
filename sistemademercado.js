@@ -34,13 +34,13 @@ function cadastrarproduto () {
 
 
 function mostrarproduto(){
-    if (produtos.length === 0){
+     if (produtos.length === 0){
         return;
     }    
 
-    for (let i = 0; i > produtos.length; i++){
+    for (let i = 0; i < produtos.length; i++) {
         let mercadoria = produtos[i];
-        console.log((i + 1))+ ". "+mercadoria.nomeproduto +" |codigo: "+mercadoria.codigo+ " | estoque: "+mercadoria.quantidade
+        console.log((i + 1)+ ". "+mercadoria.nome+" |codigo: "+mercadoria.codigo+ " | estoque: "+mercadoria.quantidade);
     }
 }
 
