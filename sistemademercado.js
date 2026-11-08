@@ -42,7 +42,7 @@ function mostrarproduto(){
         let mercadoria = produtos[i];
         console.log((i + 1)+ ". "+mercadoria.nome+" |codigo: "+mercadoria.codigo+ " | estoque: "+mercadoria.quantidade);
     }
-}
+} 
 
 function excluirproduto (){
     if(produtos === 0) {
